@@ -18,7 +18,7 @@ int main(void){
     cout<<"Unique element: "<<xorsum<<endl;
 
 
-    // 2nd approach O(nlogn)
+    // 2nd approach O(logn)
 
     // int the abve array 2 is the ans - divide the array into 2 half at this point
     // notice - (in left half first occurance is at even index and in right half first occurance is at odd index)
