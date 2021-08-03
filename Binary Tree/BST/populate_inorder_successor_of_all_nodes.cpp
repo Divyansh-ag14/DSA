@@ -1,3 +1,6 @@
+// Given a Binary Tree, write a function to populate next pointer for all nodes. 
+// The next pointer for every node should be set to point to inorder successor.
+
 #include<iostream>
 using namespace std;
 
