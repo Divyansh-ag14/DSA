@@ -15,6 +15,7 @@ void findK(node *root, int &idx, int k, int &ans){
 
     if(k==idx){
         ans=root->data;
+        idx++;
         return;
     }
 
@@ -31,6 +32,8 @@ int kthSmallestElement(node *root, int k){
 
     return ans;
 }
+
+
 
 int main(void){
 
@@ -49,5 +52,5 @@ int main(void){
     1   3   6    
     */
 
-    cout<<kthSmallestElement(root, 4);
+    cout<<kthSmallestElement(root, 1);
 }
