@@ -15,6 +15,7 @@ void findK(node *root, int &idx, int k, int &ans){
 
     if(k==idx){
         ans=root->data;
+        idx++;
         return;
     }
 
