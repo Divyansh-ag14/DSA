@@ -30,6 +30,8 @@ vector<int> BFS(vector<int>adj_list[], int n){
 
         }
     }
+
+    return bfs;
 }
 
 int main(void){
