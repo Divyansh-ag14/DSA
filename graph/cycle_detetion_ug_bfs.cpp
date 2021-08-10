@@ -64,5 +64,7 @@ int main(void){
 
     }
 
+    cout<<isCycle(adj_list, n);
+
     
 }
