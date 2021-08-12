@@ -20,17 +20,29 @@ void findTopoSort(vector<int> adj_list[], vector<int>&visited, stack<int>&s, int
 
 }
 
- vector<int> topoSort(vector<int> adj_list[], int n){
+vector<int> topoSort(vector<int> adj_list[], int n){
 
-     vector<int> visited(n+1, 0);
-     stack<int> s;
+    vector<int> visited(n+1, 0);
+    stack<int> s;
      
-     for(int i=1; i<=n; i++){
+    for(int i=1; i<=n; i++){
 
-         if(!visited[i])
-            findTopoSort(adj_list, visited, s, i);
-     }
- }
+        if(!visited[i])
+        findTopoSort(adj_list, visited, s, i);
+     
+    }
+
+    vector<int> ans;
+
+    while(!s.empty()){
+
+        ans.push_back(s.top());
+        s.pop();
+    }
+
+    return ans;
+
+}
 
 int main(void){
 }
