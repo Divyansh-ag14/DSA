@@ -67,7 +67,7 @@ void primsBrute(vector<pair<int,int>>adj_list[], int n){
     }
 
     for(int i=1; i<=n; i++)
-        cout<<parent[i]<<" -> "i<<endl;
+        cout<<parent[i]<<" -> "<<endl;
 }
 
 int main(void){
