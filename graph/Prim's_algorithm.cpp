@@ -46,7 +46,7 @@ void primsBrute(vector<pair<int,int>>adj_list[], int n){
 
         for(int v=1; v<=n; v++){
 
-            // if node has is not in mst and has min key
+            // if node is not in mst and has min key
             if(mst[v]==false && key[v]<min)
                 min=key[v], u=v;
 
