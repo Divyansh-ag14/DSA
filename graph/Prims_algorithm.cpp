@@ -76,7 +76,7 @@ int main(void){
 
     int n, m;
     cin>>n>>m;
-    vector<pair<int,int>> adj_list[n+1];
+    vector<pair<int,int>> adj_list[n];
 
     for(int i=0; i<m; i++){
 
