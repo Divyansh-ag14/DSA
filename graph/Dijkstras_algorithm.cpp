@@ -7,7 +7,7 @@
 #include<queue>
 using namespace std;
 
-void dijksta(vector<pair<int,int>> adj_list[], int n, int src){
+void dijkstra(vector<pair<int,int>> adj_list[], int n, int src){
 
     priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq; // min heap
     vector<int> distance(n+1, INT_MAX);
@@ -59,5 +59,7 @@ int main(void){
         adj_list[v].push_back({u, wt});
 
     }
+
+    dijkstra(adj_list, n, 1);
 
 }
