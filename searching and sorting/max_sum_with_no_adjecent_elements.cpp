@@ -29,4 +29,8 @@ int findMaxSum(int arr[], int n){
 
 
 int main(void){
+
+    int arr[] = {5,5,10,100,10,5};
+
+    cout<<findMaxSum(arr, 6);
 }
