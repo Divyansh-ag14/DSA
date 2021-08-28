@@ -2,12 +2,13 @@
 #include<vector>
 using namespace std;
 
+// T: O(n)   S: O(n)
 int findUtil(int i, int arr[], vector<int>&dp){
 
     // base case: index becomes less then 0
     if(i<=-1) return 0;
 
-    // memoization
+    // memoization (very important)
     if(dp[i] != -1) return dp[i];
 
     // options
