@@ -2,6 +2,7 @@
 #include<vector>
 using namespace std;
 
+// fixed value: element having value equal to its index (here we are considering 1 based indexing)
 vector<int> valueEqualToIndex(int arr[], int n) {
 	    
 	vector<int> ans;
