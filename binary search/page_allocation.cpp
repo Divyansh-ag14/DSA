@@ -31,7 +31,7 @@ bool isFeasible(int arr[], int n, int mid, int m){ // the max pages a stu can re
             students++;
             sum=arr[i];
 
-            if(students>m)
+            if(students>m) // if no of student become more then allowed: return 0
                 return 0;
         }
 
