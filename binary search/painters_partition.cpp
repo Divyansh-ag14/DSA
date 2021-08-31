@@ -32,6 +32,8 @@ bool isFeasible(int arr[], int n, int m, int k){
 
         else time+=arr[i];
     }
+
+    return 1;
 }
 
 int paintersPartiotion(int arr[], int n, int k){
