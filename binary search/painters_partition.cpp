@@ -51,11 +51,11 @@ int paintersPartiotion(int arr[], int n, int k){
 
         if(isFeasible(arr, n, m, k)){
 
-            res=min(res, m);
-            j=m-1;
+            res=min(res, m); // get the min 
+            j=m-1; // try to minimize the current feasible ans
         }
 
-        else i=m+1;
+        else i=m+1; // get a feasible ans
     }
 
     return res;
