@@ -20,17 +20,17 @@ bool isFeasible(int arr[], int n, int m, int k){
 
     for(int i=0; i<n; i++){
 
-        if(arr[i] > m) return 0;
+        if(arr[i] > m) return 0; // if current time is more then m: return 0
 
-        if(time + arr[i] > m){
+        if(time + arr[i] > m){ // if a painter can not give any more hours
 
-            painters++;
-            time=arr[i];
+            painters++; // increment the no of painters
+            time=arr[i]; // update time
 
-            if(painters>k) return 0;
+            if(painters>k) return 0; // if no of painters become more then allowed: return 0
         }
 
-        else time+=arr[i];
+        else time+=arr[i]; // if a painter can paint for more time: add time
     }
 
     return 1;
