@@ -55,8 +55,8 @@ int allocatePages(int arr[], int n, int m){
     for(int i=0; i<n; i++)
         sum+=arr[i];
 
-    // range of binary search: max to sum of all
-    // (as each stu has to have one book)
+    // range of binary search: 0 to sum of all
+    // (each stu has to have one book)
 
     int i=0, j=sum;
 
