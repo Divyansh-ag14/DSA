@@ -34,13 +34,13 @@ int main(void){
     while(i<=j){
 
         long long int  m = (i+j)/2;
-
-        if(isFeasible(arr, n, m, x)){
+ 
+        if(isFeasible(arr, n, m, x)){ // if current ans is valid try to maximize it by increasing lower bound(i)
             ans = m;
             i = m+1;
         }
 
-        else j = m-1; 
+        else j = m-1; // if ans is not valid decrease upper bound(j)
     }
 
     cout<<ans;
