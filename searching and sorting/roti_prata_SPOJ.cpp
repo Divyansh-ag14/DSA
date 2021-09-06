@@ -3,27 +3,27 @@ using namespace std;
 
 bool isFeasible(int arr[], int n, int mid, int p){
 
-    int time = 0;
+    int time = 0; 
     int pratas = 0;
 
-    for(int i=0; i<n; i++){
+    for(int i=0; i<n; i++){ // for every element in arr
 
-        time = arr[i];
-        int j = 2;
+        time = arr[i]; // initialize time with its rank
+        int j = 2; 
 
-        while(time <= mid){
+        while(time <= mid){ // while a chef can cook
 
-            pratas++;
-            time = time + (arr[i]*j);
+            pratas++; // inc the amount of food
+            time = time + (arr[i]*j); // time is increased by multiplying j in every iteration 
             j++;
 
         }
 
-        if(pratas>=p) return 1;
+        if(pratas>=p) return 1; // if food becomes greater then or equal to the required amount in time: return 1
 
     }
 
-    return 0;
+    return 0; // else return 0
 
 }
 
@@ -49,15 +49,17 @@ int main(void){
             int mid = (low+high)/2;
             if(isFeasible(ranks, n, mid, p)){
                 
-                ans = mid;
-                high = mid-1;
+                ans = mid; // if current ans(time) is valid 
+                high = mid-1; // try decreasing it
 
             }
 
-            else low = mid+1;
+            else low = mid+1; // if curr time is not valid: increase lower bound(low)
+
         }
 
         cout<<ans<<endl;
 
     }
+
 }
