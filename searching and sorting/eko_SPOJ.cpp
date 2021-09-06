@@ -44,11 +44,11 @@ bool isFeasible(int arr[], int n, int m, int x){
     long long int sum = 0;
 
     for(int i=0; i<n; i++){
-        if(m < arr[i])
-            sum+= arr[i] - m;
+        if(m < arr[i]) // if the height of tree is more then m
+            sum+= arr[i] - m; // cut the tree at m
     }
 
-    if(sum >= x) return 1;
+    if(sum >= x) return 1; // if the sum is more then or equal to required amount: return 1
     return 0;
 
 }
