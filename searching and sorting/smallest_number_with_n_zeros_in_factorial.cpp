@@ -42,4 +42,7 @@ int findNum(int n){
 }
 
 int main(void){
+
+    int n; cin>>n;
+    cout<<findNum(n);
 }
