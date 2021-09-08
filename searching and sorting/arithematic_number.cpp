@@ -1,3 +1,9 @@
+/*
+Given three integers  'A' denoting the first term of an arithmetic sequence , 'C' denoting the common difference 
+of an arithmetic sequence and an integer 'B'. 
+you need to tell whether 'B' exists in the arithmetic sequence or not.
+*/
+
 #include<iostream>
 using namespace std;
 
