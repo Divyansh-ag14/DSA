@@ -1,8 +1,11 @@
+/*
+Given a number n. 
+The task is to find the smallest number whose factorial contains at least n trailing zeroes.
+*/
 #include<iostream>
 using namespace std;
 
 // number of zeros can be calculated using the formula =: x/5 + x/25 + .... (x is the number we caluclate facotrial of)
-
 bool isFeasible(int m, int n){
 
     int count=0, f=5;
