@@ -20,6 +20,8 @@ bool isFeasible(int m, int n){
 
 int findNum(int n){
 
+    if(n==1) return 1;
+
     int low = 0, high = 5*n, ans=0;
 
     while(low<=high){
