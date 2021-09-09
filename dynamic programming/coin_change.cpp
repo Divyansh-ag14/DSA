@@ -1,3 +1,8 @@
+/*
+Given a value N, find the number of ways to make change for N cents, 
+if we have infinite supply of each of S = { S1, S2, .. , SM } valued coins.
+*/
+
 #include<iostream>
 using namespace std;
 
