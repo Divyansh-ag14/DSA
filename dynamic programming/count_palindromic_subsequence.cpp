@@ -12,7 +12,7 @@ long long int util(int i, int j, string s, long long int **dp){
     // if the i and j match: add 1 to ans
     // search the string by increasing i and another time by decreasing j
     if(s[i]==s[j]) 
-        dp[i][j] = util(i+1, j, s, dp) + util(i, j-1, s, dp) + 1;
+        dp[i][j] = (util(i+1,j,s, dp)%mod + util(i,j-1,s, dp)%mod + 1+mod)%mod;
 
     // if they dont match:
     // search the string by increasing i and another time by decreasing j
@@ -20,7 +20,7 @@ long long int util(int i, int j, string s, long long int **dp){
     // ex: abc -> bc    ab 
     //           c  b  b  a
     // b comes twice so subtract it once
-    else dp[i][j] = util(i+1, j, s, dp) + util(i, j-1, s, dp) - util(i+1, j-1, s, dp);
+    else dp[i][j] = (util(i+1,j,s, dp)%mod + util(i,j-1,s, dp)%mod - util(i+1,j-1,s, dp)%mod+mod)%mod;
 
     return dp[i][j]; 
 }
