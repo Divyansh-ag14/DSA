@@ -1,5 +1,12 @@
+/*
+Given a string str of length N, you have to find number of palindromic subsequence 
+(need not necessarily be distinct) which could be formed from the string str.
+Note: You have to return the answer module 109+7;
+*/
+
 #include<iostream>
 #include<string>
+#define mod 1000000007
 using namespace std;
 
 long long int util(int i, int j, string s, long long int **dp){
