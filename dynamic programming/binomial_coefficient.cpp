@@ -1,3 +1,5 @@
+//Given two integers n and r, find nCr. Since the answer may be very large, calculate the answer modulo 109+7.
+
 #include<iostream>
 using namespace std;
 
