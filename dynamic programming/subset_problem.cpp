@@ -1,3 +1,6 @@
+// Given an array arr[] of size N, check if it can be partitioned into two parts 
+// such that the sum of elements in both parts is the same.
+
 #include<iostream>
 using namespace std;
 
@@ -27,7 +30,7 @@ int equalPartition(int N, int arr[]){
     for(int i=0; i<N; i++)
         s+=arr[i];
 
-    if(s%2!=0)
+    if(s%2!=0) // if sum is odd it cant be broken into 2 parts
         return 0;
 
     int **dp = new int*[N];
