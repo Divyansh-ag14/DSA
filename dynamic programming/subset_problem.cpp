@@ -23,6 +23,8 @@ int util(int arr[], int **dp, int n, int s){
 
 }
 
+// Expected Time Complexity: O(N*sum of elements)
+// Expected Auxiliary Space: O(N*sum of elements)
 int equalPartition(int N, int arr[]){
 
     int s = 0;
