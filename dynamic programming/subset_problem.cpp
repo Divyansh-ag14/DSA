@@ -35,6 +35,10 @@ int equalPartition(int N, int arr[]){
     if(s%2!=0) // if sum is odd it cant be broken into 2 parts
         return 0;
 
+    // if s is even
+    // check if s/2 can be put in a seperate part
+    s = s/2;  
+
     int **dp = new int*[N];
 
     for(int i=0; i<N; i++){
@@ -45,8 +49,6 @@ int equalPartition(int N, int arr[]){
             dp[i][j] = -1;
 
     }
-
-    s = s/2;
 
     return util(arr, dp, N-1, s);
 
