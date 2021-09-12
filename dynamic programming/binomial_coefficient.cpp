@@ -16,6 +16,7 @@ using namespace std;
 
 */
 
+// S: O(r)  T: (n*r)
 int nCr(int n, int r){
 
     int mod = 1e9+7;
