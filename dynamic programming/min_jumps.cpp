@@ -2,6 +2,7 @@
 #include<limits.h>
 using namespace std;
 
+//T: O(n^2)  S: (n)
 int minJumps(int arr[], int n){
 
     if(n==1) return 0; // if size is 1: we are already at end
@@ -35,5 +36,5 @@ int minJumps(int arr[], int n){
 
 int main(void){
 
-    
+
 }
