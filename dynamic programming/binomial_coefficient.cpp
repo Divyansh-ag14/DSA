@@ -24,7 +24,7 @@ int nCr(int n, int r){
 
     if((n-r) < r) r = n-r; // compute for smaller value: both will give same ans
 
-    int dp[r+1]; // r+1 to store to get the index as number
+    int dp[r+1]; // r+1 to store to get the number as index
 
     for(int i=0; i<=r; i++) dp[i] = 0;
     dp[0]=1;
