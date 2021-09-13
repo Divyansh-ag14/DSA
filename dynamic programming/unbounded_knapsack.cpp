@@ -1,3 +1,9 @@
+/*
+Given a set of N items, each with a weight and a value, and a weight limit W. 
+Find the maximum value of a collection containing any of the N items any number of times so that the total weight 
+is less than or equal to W.
+*/
+
 #include<iostream>
 using namespace std;
 
