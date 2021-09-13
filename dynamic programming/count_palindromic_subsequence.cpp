@@ -9,7 +9,7 @@ Note: You have to return the answer module 109+7;
 #define mod 1000000007
 using namespace std;
 
-long long int util(int i, int j, string s, long long int **dp){
+long long int util(int i, int j, string &s, long long int **dp){
 
     if(i>j) return 0;
     if(i==j) return 1; // single alphabet
