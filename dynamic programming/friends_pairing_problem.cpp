@@ -24,6 +24,8 @@ long long int util(int i, long long int dp[]){
 
 }
 
+
+
 int countFriendsPair(int n){
 
     long long int dp[n+1];
@@ -32,6 +34,24 @@ int countFriendsPair(int n){
 
     return util(0, dp)%mod;
 
+}
+
+// T: O(n)  S: O(1)
+int countFriendsPairings(int n) { 
+
+    int a = 1, b= 2, c=0;
+        
+    if(n<=2) return n;
+        
+    for(long long int i=3; i<=n; i++){
+        
+        c = (b%mod + ((i-1)*a)%mod)%mod;
+        a = b;
+        b = c;
+        
+    }
+    
+    return c;
 }
 
 int main(void){
