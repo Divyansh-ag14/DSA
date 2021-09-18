@@ -23,7 +23,7 @@ int wordBreakUtil(string A, vector<string> &B, unordered_map<string, int> &dp){
         bool flag = 0; 
         string sub_str = A.substr(0, i);
 
-        for(int j=0; j<=B.size(); j++){ // check for the sub string in vector
+        for(int j=0; j<B.size(); j++){ // check for the sub string in vector
 
             if(sub_str.compare(B[j])==0){ // if it is found
 
