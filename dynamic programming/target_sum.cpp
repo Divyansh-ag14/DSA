@@ -16,6 +16,13 @@ Explanation: There are 5 ways to assign symbols to make the sum of nums be targe
 +1 + 1 - 1 + 1 + 1 = 3
 +1 + 1 + 1 - 1 + 1 = 3
 +1 + 1 + 1 + 1 - 1 = 3
+
+Constraints:
+
+1 <= nums.length <= 20
+0 <= nums[i] <= 1000
+0 <= sum(nums[i]) <= 1000
+-1000 <= target <= 1000
 */
 
 #include<bits/stdc++.h>
