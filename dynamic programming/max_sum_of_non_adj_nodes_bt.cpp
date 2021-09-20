@@ -1,8 +1,21 @@
 /*
+
 Given a binary tree with a value associated with each node, 
 we need to choose a subset of these nodes such that sum of chosen nodes is maximum 
 under a constraint that no two chosen node in subset should be directly connected that is, 
 if we have taken a node in our sum then we can’t take its any children or parents in consideration and vice versa.
+
+Ex:
+        1
+      /   \
+     2     3
+    /     /  \
+   4     5    6
+ans = 16
+Explanation: The maximum sum is sum of
+nodes 1 4 5 6 , i.e 16. These nodes are
+non adjacent.
+
 */
 
 #include<iostream>
