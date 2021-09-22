@@ -1,3 +1,23 @@
+/*
+
+Given a gold mine called M of (n x m) dimensions. Each field in this mine contains a positive integer which is the amount of gold in tons. Initially the miner can start from any row in the first column. From a given cell, the miner can move
+
+to the cell diagonally up towards the right 
+to the right
+to the cell diagonally down towards the right
+Find out maximum amount of gold which he can collect.
+
+
+Example:
+
+Input: n = 3, m = 3
+M = {{1, 3, 3},
+     {2, 1, 4},
+     {0, 6, 4}};
+Output: 12
+
+*/
+
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -45,5 +65,5 @@ int main(void){
                             {0, 6, 1, 2}};
 
     cout<<maxGold(n, m, M);
-    
+
 }
