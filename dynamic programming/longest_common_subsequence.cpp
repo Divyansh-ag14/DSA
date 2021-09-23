@@ -1,3 +1,22 @@
+/*
+
+Given two sequences, find the length of longest subsequence present in both of them.
+
+Example:
+
+Input:
+A = 6, B = 6
+str1 = ABCDGH
+str2 = AEDFHR
+
+Output: 3
+
+Explanation: LCS for input Sequences
+“ABCDGH” and “AEDFHR” is “ADH” of
+length 3.
+
+*/
+
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -39,5 +58,5 @@ int main(void){
     string str1 = "ABCDGH", str2 = "AEDFHR";
 
     cout<<lcs(A, B, str1, str2);
-    
+
 }
