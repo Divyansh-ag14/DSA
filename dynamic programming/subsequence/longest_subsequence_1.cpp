@@ -1,3 +1,18 @@
+/*
+Given an array A[] of size N, find the longest subsequence such that difference between adjacent elements is one.
+
+Example:
+
+Input: N = 7
+
+A[] = {10, 9, 4, 5, 4, 8, 6}
+
+Output: 3
+
+Explaination: The three possible subsequences 
+{10, 9, 8} , {4, 5, 4} and {4, 5, 6}.
+*/
+
 #include<iostream>
 using namespace std;
 
