@@ -30,11 +30,11 @@ int longestSubsequence(int N, int A[]){
 
         int l = 0; // length of num+1 and num-1
 
-        if(m[A[i-1]]) // if num-1 is present in map: set length to its value
-            l = m[A[i-1]];
+        if(m[A[i]-1]) // if num-1 is present in map: set length to its value
+            l = m[A[i]-1];
 
-        if(m[A[i+1]] && m[A[i+1]]>l) // if num+1 is present: check if its bigger then current length, if yes update length
-            l = m[A[i+1]];
+        if(m[A[i]+1] && m[A[i]+1]>l) // if num+1 is present: check if its bigger then current length, if yes update length
+            l = m[A[i]+1];
 
         m[A[i]] = l+1; // current ans at num will be length + 1
 
