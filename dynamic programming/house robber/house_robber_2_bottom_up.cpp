@@ -30,7 +30,7 @@ int util(vector<int> &nums){
 
     if(n>=1) dp[0]=nums[0];
 
-    if(n>=2) dp[1] = max(nums[1], nums[2]);
+    if(n>=2) dp[1] = max(nums[0], nums[1]);
 
     for(int i=2; i<n; i++)
         dp[i] = max(dp[i-1], nums[i]+dp[i-2]);
