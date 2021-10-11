@@ -1,3 +1,5 @@
+// Given a 2D matrix M of dimensions RxC. Find the maximum sum subarray in it.
+
 #include<iostream>
 #include<vector>
 #include<limits.h>
