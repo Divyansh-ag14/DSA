@@ -31,10 +31,32 @@ int countDer2(int n){
     return dp[n];
 }
 
+// space optimized approach
+// as for every element we only have to check i-1 and i-2th elements: we can store them in variables rather than array
+// T: O(n)  S: O(1)
+int countDer3(int n){
+
+    if(n==0 || n==1) return 0;
+    if(n==2) return 1;
+
+    int a = 0; // dp[1]
+    int b = 1; // dp[2]
+
+    for(int i=3; i<=n; i++){
+
+        int temp = (i-1) * (a+b);
+        a = b;
+        b = temp;
+
+    }
+
+    return b;
+
+}
 
 int main(void){
 
     cout<<countDer(4)<<endl;
     cout<<countDer2(4)<<endl;
-
+    cout<<countDer3(4);
 }
