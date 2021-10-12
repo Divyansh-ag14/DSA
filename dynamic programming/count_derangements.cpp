@@ -1,3 +1,9 @@
+/*
+A Derangement is a permutation of n elements, such that no element appears in its original position. 
+For example, a derangement of {0, 1, 2, 3} is {2, 3, 1, 0}.
+Given a number n, find the total number of Derangements of a set of n elements.
+*/
+
 #include<iostream>
 using namespace std;
 
