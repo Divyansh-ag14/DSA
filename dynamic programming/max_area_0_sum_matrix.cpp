@@ -53,6 +53,7 @@ int findMatrix(int R, int C, vector<vector<int>> M){
 
             }
 
+            // getZero returns length of 1 d array multiply it with current row - ith row (+1 for coz 0 based indexing)
             ans = max(ans, getZero(v)*(j-i+1));
 
         }
