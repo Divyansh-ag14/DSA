@@ -15,12 +15,17 @@ int getZero(vector<int> v){
 
         s+= v[i];
 
+        // helps when all the element are positive and one element is 0
         if(v[i]==0 && ans==0)
             ans=1;
 
+        // if sum becomes 0: ans = index + 1 as index starts from 0
         if(s==0)
             ans = i+1;
 
+        // if a sum is repeated again: in between some numbers add upto 0
+        // from current index subtract the index where sum first occured
+        // store the max value
         else if(m.find(s) != m.end())
             ans = max(ans, i-m[s]);
         
