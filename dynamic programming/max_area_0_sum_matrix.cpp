@@ -1,0 +1,71 @@
+#include<iostream>
+#include<vector>
+#include<limits.h>
+#include<unordered_map>
+using namespace std;
+
+// function to get the length of mss
+int getZero(vector<int> v){
+
+    int ans=0;
+    unordered_map<int,int> m;
+
+    int s=0;
+    for(int i=0; i<v.size(); i++){
+
+        s+= v[i];
+
+        if(v[i]==0 && ans==0)
+            ans=1;
+
+        if(s==0)
+            ans = i+1;
+
+        else if(m.find(s) != m.end())
+            ans = max(ans, i-m[s]);
+        
+        else m[s]=i;
+
+    }
+
+    return ans;
+
+}
+
+int findMatrix(int R, int C, vector<vector<int>> M){
+
+    int ans = INT_MIN;
+
+    for(int i=0; i<R; i++){
+
+        vector<int> v(C);
+
+        for(int j=i; j<R; j++){
+
+            for(int k=0; k<C; k++){
+
+                v[k] += M[j][k];
+
+            }
+
+            ans = max(ans, getZero(v)*(j-i+1));
+
+        }
+
+    }
+
+    return ans;
+
+}
+
+int main(void){
+
+    vector<vector<int>> M = { 
+                                { 9, 7, 16, 5 }, 
+                                { 1, -6, -7, 3 },
+                                { 1, 8, 7, 9 }, 
+                                { 7, -2, 0, 10 } 
+                            };
+
+    cout<<findMatrix(4, 4, M);
+}
