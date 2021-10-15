@@ -18,6 +18,9 @@ int minPathSum(vector<vector<int>> &grid){
     for(int i=0; i<=cols; i++)
         dp[rows][i] = INT_MAX;
 
+    // as we can only go down and right 
+    // set 0 for the positions in dp we will use to build ans from the last element in grid
+    // as last element can not be added with any numbers
     dp[rows-1][cols]=0; // right to arr
     dp[rows][cols-1]=0; // down to arr
 
