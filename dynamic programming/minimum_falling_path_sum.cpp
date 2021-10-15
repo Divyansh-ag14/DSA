@@ -38,9 +38,11 @@ int minFallingPathSum(vector<vector<int>>& matrix) {
             int below = matrix[i+1][j]; // go exactly below it
 
             // go lower left (diagnal): check if current col is 0: we can not go more left from 0th col
+            // if we can not move left: set value as INT_MAX, so when comparing min it will be left out
             int below_left = j==0 ? INT_MAX : matrix[i+1][j-1];
 
             // go lower right (diagnal): check if we are at the last col: we can not move right from here
+             // if we can not move right: set value as INT_MAX, so when comparing min it will be left out
             int below_right = j==cols-1 ? INT_MAX : matrix[i+1][j+1];
 
             // add min of three to current element
