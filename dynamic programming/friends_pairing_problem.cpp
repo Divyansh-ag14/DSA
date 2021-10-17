@@ -24,8 +24,6 @@ long long int util(int i, long long int dp[]){
 
 }
 
-
-
 int countFriendsPair(int n){
 
     long long int dp[n+1];
