@@ -10,10 +10,12 @@ Find out maximum amount of gold which he can collect.
 
 Example:
 
-Input: n = 3, m = 3
+Input: 
+n = 3, m = 3
 M = {{1, 3, 3},
      {2, 1, 4},
      {0, 6, 4}};
+
 Output: 12
 
 */
