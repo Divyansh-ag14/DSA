@@ -31,6 +31,7 @@ int fib2(int n){
         dp[i] = dp[i-1] + dp[i-2];
 
     return dp[n];
+    
 }
 
 int main(void){
