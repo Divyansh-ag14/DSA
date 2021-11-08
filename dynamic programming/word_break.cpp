@@ -16,7 +16,7 @@ int wordBreakUtil(string A, vector<string> &B, unordered_map<string, int> &dp){
 
     if(str_length==0) return 1; // if len is 0: return 1 (no more searching required)
 
-    if(dp[A] != 0) return dp[A]; // if map has some ans return it
+    if(dp[A] != 0) return dp[A]; // if map has some ans: return it
 
     for(int i=1; i<=str_length; i++){ // for a given str generate substrings
 
@@ -27,7 +27,7 @@ int wordBreakUtil(string A, vector<string> &B, unordered_map<string, int> &dp){
 
             if(sub_str.compare(B[j])==0){ // if it is found
 
-                flag =1; // change flag and break
+                flag = 1; // change flag and break
                 break;
             }
 
