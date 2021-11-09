@@ -16,7 +16,7 @@ int getPos(int arr[], int n, int x, int move){
         else if(arr[m]>x)
             r=m-1;
 
-        else{ // when m mathces x
+        else{ // when arr[m] matches x
 
             ans=m; // ans becomes index m
 
