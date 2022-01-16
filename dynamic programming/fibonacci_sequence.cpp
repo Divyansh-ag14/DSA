@@ -59,4 +59,5 @@ int main(void){
         dp[i] = -1;
 
     cout<<fib2(n)<<endl;
+    cout<<fib3(n)<<endl;
 }
