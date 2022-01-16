@@ -23,7 +23,7 @@ int fib(int n){ // recursion based
 // bottom up (small to big)
 int fib2(int n){ 
 
-    int dp[n+1];    
+    int dp[n+1]; // size is n+1 to have the actual number as index   
 
     dp[0]=0, dp[1]=0, dp[2]=1;
 
