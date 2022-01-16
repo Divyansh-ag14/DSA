@@ -34,6 +34,7 @@ int fib2(int n){
     
 }
 
+// space optimized
 int fib3(int n){
 
     int a=0, b=1;
