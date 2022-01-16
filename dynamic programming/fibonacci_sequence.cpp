@@ -37,6 +37,7 @@ int fib2(int n){
 // space optimized
 int fib3(int n){
 
+// instead of creating array we can just store the prev numbers and then update them accordingly
     int a=0, b=1;
 
     if(n==1)
