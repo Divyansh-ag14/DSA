@@ -34,6 +34,21 @@ int fib2(int n){
     
 }
 
+int fib3(int n){
+
+    int a=0, b=1;
+
+    if(n==1)
+        return a;
+
+    for(int i=3; i<=n; i++){
+        b=b+a;
+        a=b-a;
+    }
+
+    return b;
+}
+
 int main(void){
 
     int n; cin>>n;
