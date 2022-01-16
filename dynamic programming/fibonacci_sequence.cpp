@@ -15,7 +15,7 @@ int fib(int n){
     if(n==2) return 1;
     if(dp[n] != -1) return dp[n];
 
-    dp[n] =  fib(n-1) + fib(n-2);
+    dp[n] =  fib(n-1) + fib(n-2); // memoization: if the ans is found earlier then return it instead of calculating it again
 
     return dp[n];
 }
