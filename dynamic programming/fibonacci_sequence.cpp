@@ -9,7 +9,7 @@ const int N = 1e5;
 int dp[N];
 
 // top down (big to small)
-int fib(int n){
+int fib(int n){ // recusion based
 
     if(n==0 || n==1) return 0;
     if(n==2) return 1;
