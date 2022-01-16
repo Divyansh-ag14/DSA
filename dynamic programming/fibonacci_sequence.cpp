@@ -38,6 +38,8 @@ int fib2(int n){
 int fib3(int n){
 
 // instead of creating array we can just store the prev numbers and then update them accordingly
+
+// first 2 numbers
     int a=0, b=1;
 
     if(n==1)
