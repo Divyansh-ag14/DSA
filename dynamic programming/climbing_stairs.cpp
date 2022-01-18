@@ -55,11 +55,14 @@ int climbStairs(int n){
 
     for(int i=0; i<=n; i++) dp[i]=-1;
 
-    return util(n, dp);
+    // change uitl2 to util 
+    return util2(n, dp);
+
 
 }
 
 int main(void){
 
+    // by defualt this func will call util2
     cout<<climbStairs(2);
 }
