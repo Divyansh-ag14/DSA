@@ -105,7 +105,7 @@ int main(void){
     for(int i=0; i<n; i++)
         cin>>input[i];
 
-    vector<int> output = ans.sortByBits2(input);
+    vector<int> output = ans.sortByBits2(input); // by defualt the 2nd method is called: change it to sortByBits if yo wish to
 
     for(auto i: output) cout<<i<<" ";
     
