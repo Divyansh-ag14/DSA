@@ -57,6 +57,40 @@ class Solution{
         return arr;
     }
 
+    // 2nd method
+    vector<int> sortByBits2(vector<int> &arr){
+
+        // create a map to store the number of bits in asceding order 
+        // the map conains: an int that represents the number of bits
+        //                  a vector that sotres all the numbers having equal bits
+        // so map is used to store bits as index where each index has vector
+        vector<int> ans;
+        map<int, vector<int>> m;
+
+        // store bits in map: sorted in asceding order
+        // store the element corresponding to that bit
+        for(auto i: arr){
+
+            int bits = __builtin_popcount(i);
+            m[bits].push_back(i);
+        }
+
+        // now we have a sorted order of bits with their respective arrays
+        // simply iterate the map and push vector elements at each key to ans vector
+        // (dont forget to sort the vectors)
+        for(auto i: m){
+
+            vector<int> nums = i.second;
+            sort(nums.begin(), nums.end()); // imp
+
+            for(auto j: nums)
+                ans.push_back(j);
+
+        }
+
+        return ans;
+
+    }
 };
 
 int main(void){
@@ -71,7 +105,7 @@ int main(void){
     for(int i=0; i<n; i++)
         cin>>input[i];
 
-    vector<int> output = ans.sortByBits(input);
+    vector<int> output = ans.sortByBits2(input);
 
     for(auto i: output) cout<<i<<" ";
     
