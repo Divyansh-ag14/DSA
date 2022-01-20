@@ -53,5 +53,39 @@ int findDuplicate(vector<int> &nums){
 
 }
 
+// T: O(n)  S: O(1)
+
+// hare and tortoise method
+int findDuplicates2(vector<int> &nums){
+    
+    // traverse the array in a linked list cylic chain manner: i.e start from the first index then go to the index of the num
+                                                                // nums[i] and so on
+    // keep two pointers: slow and fast
+    // slow moves by 1 fast moves by 2
+    // if there is a loop then at a certain point both the pointers will be at the same pos
+    int slow = nums[0];
+    int fast = nums[0];
+
+    do
+    {
+        slow=nums[slow];
+        fast=nums[nums[fast]];
+
+    } while (slow!=fast);
+    
+    fast=nums[0];
+
+    while(slow!=fast){
+        slow=nums[slow];
+        fast=nums[fast];
+    }
+
+    return fast;
+
+
+}
+
+
+
 int main(void){
 }
