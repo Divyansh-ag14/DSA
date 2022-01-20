@@ -46,7 +46,30 @@ vector<int> twoSum(vector<int>& nums, int target) {
     return ans;
 }
 
+// optimized: S O(n)  T O(n)
+vector<int> twoSum2(vector<int> &nums, int target){
 
+    vector<int> ans;
+    unordered_map<int,int> m; // create a map to store (element, index)
+
+    for(int i=0; i<nums.size(); i++){
+
+        // find the target-num value in map
+        // if it is found: push the index value in map and current index
+        if(m.find(target-nums[i]) != m.end()){
+
+            ans.push_back(target-nums[i]);
+            ans.push_back(i);
+            return ans;
+        }
+
+        // store the index at position equal to element value
+        m[nums[i]] = i;
+    }
+
+    return ans;
+
+}
 
 int main(void){
 }
