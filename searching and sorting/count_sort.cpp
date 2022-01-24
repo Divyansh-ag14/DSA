@@ -1,4 +1,33 @@
+/*
 
+1. find the count of every distinct element in the array
+(for this create a count array of size max element + 1 present in array and store the count of each element in it)
+(max index of count array = max element of array)
+
+2. calculate the position of each element in the sorted array
+(for this modify the count array by adding the number of occurences of prev element to next element) - count_arr[i] += count_arr[i-1]
+
+3. now travesre the array from last and check the pos in position array
+(place this element in a new array at pos = position - 1)
+(decrement 1 from position i.e modified count array for that element)
+
+ex - arr = 1 3 2 3 4 1 6 4 3 (size = 9)
+    
+    count_arr = 0 2 1 3 2 0 1 (size = 7)
+   (index)      0 1 2 3 4 5 6 
+    
+    position = 0 2 3 6 8 0 9  (modified count_arr)
+    (index)  = 0 1 2 3 4 5 6    
+
+    ans  =   [                ] // initally empty
+    (index) = 0 1 2 3 4 5 6 7 8 
+
+    now traverse arr from right hand side
+    first element is 3 - check position at index 3 - place 3 at pos-1 i.e at index 5 in ans and decrement val of position by 1 
+    move to the next element of arr
+    repeat till ans is completely filled
+
+*/
 
 #include<iostream>
 using namespace std;
