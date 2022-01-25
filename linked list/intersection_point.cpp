@@ -23,6 +23,21 @@ int findLength(node *head){
     return count;
 }
 
+int interSectionNew(node *head1, node *head2){
+
+    node *a=head1, *b=head2;
+
+    while(a!=b){
+
+        a = a==NULL ? head2 : a->next;
+        b = b==NULL ? head1 : b->next;
+
+    }
+
+    return a->data;
+
+}
+
 int intersection(node *&head1, node*&head2){
 
     int l1= findLength(head1);
@@ -118,6 +133,7 @@ int main(void){
     int ans = intersection(head1, head2);
     int len1= findLength(head1);
     cout<<ans;
+    cout<<endl<<interSectionNew(head1, head2);
 }
 
 
