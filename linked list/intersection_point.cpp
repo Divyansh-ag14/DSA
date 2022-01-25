@@ -23,6 +23,11 @@ int findLength(node *head){
     return count;
 }
 
+// use 2 pointers a and b pointing to lists respectively
+// while a!=b keep on updating them
+// if a becomes null make it point to list2
+// if b becomes null make it point to list1
+// return a or b
 int interSectionNew(node *head1, node *head2){
 
     node *a=head1, *b=head2;
