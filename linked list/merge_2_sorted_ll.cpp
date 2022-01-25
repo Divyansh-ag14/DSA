@@ -18,7 +18,45 @@ void insert(node *&head, int val){
     temp->next=n;
 }
 
-node *merge(node *&head1, node *&head2){
+// S: O(1)
+// this is an inplace solution
+// we are not creating a new list, just modifiying the links
+node *mergeOptimized(node *l1, node *l2){
+
+    if(l1==NULL) return l2;
+    if(l2==NULL) return l1;
+
+    // l1 should always be smaller
+    if(l1->data > l2->data)
+        swap(l1, l2);
+
+    // assingn res to l1
+    node *res=l1;
+
+    // iterate through both the lists
+    while(l1!=NULL && l2!=NULL){
+
+        // create a temp to modify links
+        node *temp=NULL;
+
+        // until l1 < l2: temp will keep pointing to l1
+        while(l1!=NULL && l1->data <= l2->data){
+            temp=l1;
+            l1=l1->next;
+        }
+
+        // when l2 becomes less than l1: update the link
+        // swap to make l1 smaller again
+        temp->next=l2;
+        swap(l1, l2);
+
+    }
+
+    return res;
+
+}
+
+node *merge(node *head1, node *head2){
 // create 3 pointers and (one dummy node)
 // one pointer will point to dummy node
 
@@ -55,7 +93,7 @@ node *merge(node *&head1, node *&head2){
     return dummynode->next;
 }
 
-node *mergeRecursive(node *&head1, node *&head2){
+node *mergeRecursive(node *head1, node *head2){
 
     node *ans;
     
@@ -97,7 +135,9 @@ int main(void){
     display(head1);
     cout<<endl<<"list 2: ";
     display(head2);
-    node *newhead =mergeRecursive(head1, head2);
+    //node *newhead =mergeRecursive(head1, head2);
+    node *ans = mergeOptimized(head1, head2);
     cout<<endl<<"merged list: ";
-    display(newhead);
+    //display(newhead);
+    display(ans);
 }
