@@ -42,7 +42,68 @@ int catchThieves(char arr[], int n, int k){
 
 }
 
+// optimal : S O(1)
+int catchThievesOptimal(char arr[], int n, int k){
 
+    // get the first index of police and thief
+    int pol=-1, thi=-1, res=0;
+
+    for(int i=0; i<n; i++){
+        if(arr[i]=='P'){
+            pol=i; // index of first police
+            break;
+        }
+    }
+
+    for(int i=0; i<n; i++){
+        if(arr[i]=='T'){
+            thi=i; // index of first police
+            break;
+        }
+    }
+
+    while(pol<n && thi<n){
+
+        if(abs(pol-thi) <= k){ // if a thief can be caught: inc res and find the next pol and thi
+
+            res++;
+
+            pol=pol+1;
+            while(pol<n && arr[pol]!= 'P') 
+                pol++;
+
+            thi=thi+1;
+            while(thi<n && arr[thi]!= 'T') 
+                thi++;
+
+        }
+
+        else{
+
+            // if police is behind thief: get the next pol to catch it
+            if(pol < thi){
+
+                pol=pol+1;
+                while(pol<n && arr[pol]!= 'P') 
+                pol++;
+
+            }
+
+            else{
+
+                thi=thi+1;
+                while(thi<n && arr[thi]!= 'T') 
+                thi++;
+
+            }
+
+        }
+
+    }
+
+    return res;
+
+}
 
 int main(void){
 
@@ -50,5 +111,5 @@ int main(void){
     char arr[] = {'T', 'T', 'P', 'P', 'T', 'P'};
 
     cout<<catchThieves(arr, N, K)<<endl;
-    
+    cout<<catchThievesOptimal(arr, N, K);
 }
