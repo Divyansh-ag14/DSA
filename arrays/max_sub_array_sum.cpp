@@ -47,6 +47,7 @@ int findSum3(int arr[], int n){
 
         curr_sum = max(curr_sum+arr[i], arr[i]);
         ans = max(ans, curr_sum);
+    
     }
 
     return ans;
