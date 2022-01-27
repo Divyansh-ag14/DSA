@@ -38,7 +38,7 @@ int findSum2(int arr[], int n){
 }
 
 // T: O(n)
-int findSum3(int arr[], int n){
+int findSum3(int arr[], int n){ // kadane
 
     int ans=arr[0];
     int curr_sum=arr[0];
@@ -54,4 +54,9 @@ int findSum3(int arr[], int n){
 }
 
 int main(void){
+
+    int arr[] = {-2,-3,4,-1,-2,1,5,-3};
+    int n = 8;
+
+    cout<<findSum(arr,n)<<endl<<findSum2(arr,n)<<endl<<findSum3(arr,n);
 }
