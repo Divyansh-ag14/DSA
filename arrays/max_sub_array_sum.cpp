@@ -15,6 +15,8 @@ int findSum(int arr[], int n){
             ans=max(ans, s);
         }
     }
+
+    return ans;
 }
 
 
@@ -31,6 +33,8 @@ int findSum2(int arr[], int n){
         }
     }
 
+    return ans;
+
 }
 
 // T: O(n)
@@ -44,6 +48,8 @@ int findSum3(int arr[], int n){
         curr_sum = max(curr_sum+arr[i], arr[i]);
         ans = max(ans, curr_sum);
     }
+
+    return ans;
 }
 
 int main(void){
