@@ -1,3 +1,5 @@
+// given a mtrix modify entire row and col of the element having value equal to 0
+
 #include<iostream>
 #include<vector>
 #include<limits.h>
