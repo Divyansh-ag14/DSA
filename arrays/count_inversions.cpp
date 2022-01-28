@@ -1,3 +1,5 @@
+// inversion: arr[i] > arr[j] given i < j
+
 #include<iostream>
 #define ll long long
 using namespace std;
