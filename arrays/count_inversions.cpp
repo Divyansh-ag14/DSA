@@ -5,7 +5,7 @@
 using namespace std;
 
 // brute force : T: O(n^2)
-ll countInversionsBrute(int arr, int n){
+ll countInversionsBrute(int arr[], int n){
 
     ll inv = 0;
 
