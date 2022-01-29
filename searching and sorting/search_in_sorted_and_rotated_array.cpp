@@ -8,6 +8,8 @@ int searchUtil(vector<int>& nums, int l, int r, int target){
 
     int m = (l+r)/2;
 
+    if(nums[m] == target) return m; 
+
     if(nums[l] <= nums[m]){ // first half is sorted
 
         if(target>=nums[l] && target<=nums[m]) 
