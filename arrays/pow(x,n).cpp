@@ -9,6 +9,20 @@ Example 1:
 Input: x = 2.00000, n = 10
 Output: 1024.00000
 
+
+algorithm:
+
+consider x=2, n=10
+
+2^10 = 4^5
+4^5 = 4*4^4 
+4^4 = 16^2
+16^2 = 256^1
+256^1 = 256*256^0
+
+if power (n) is even: n=n/2 and x=x*x
+if power is odd: ans=ans*x and n=n-1
+
 */
 
 #include<iostream>
