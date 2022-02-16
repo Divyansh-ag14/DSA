@@ -44,5 +44,23 @@ int minCostClimbingStairs(vector<int>& cost) {
         
 }
 
+// bottom up
+int minCostClimbingStairs2(vector<int>& cost) {
+        
+    int n = cost.size();
+    int dp[n+2];
+
+    dp[n]=0, dp[n+1]=0;
+    
+    for(int i=n-1; i>=0; i--){
+        dp[i] = cost[i] + min(dp[n+1], dp[n+2]);
+    }
+
+    
+    // we can either start from the 0th or 1st index
+    return min(dp[0], dp[1]);
+        
+}
+
 int main(void){
 }
