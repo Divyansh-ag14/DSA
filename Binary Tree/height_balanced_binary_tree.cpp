@@ -9,6 +9,25 @@ struct node{
     node(int val){ data=val; left=NULL; right=NULL; }
 };
 
+int util(node *root){
+
+    if(root==NULL) return 0;
+
+    int lh = util(root->left);
+    int rh = util(root->right);
+
+    if(lh==-1 || rh==-1) return -1;
+    if(abs(rh-lh)>1) return -1;
+
+    return max(rh,lh) + 1;
+    
+}
+
+bool isBalancedOptimized(node *root){
+
+    return util(root)==-1 ? 0 : 1;
+}
+
 int findHeight(node *root){
 
     if(root==NULL) return 0;
