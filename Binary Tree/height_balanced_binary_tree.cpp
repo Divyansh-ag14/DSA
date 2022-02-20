@@ -9,20 +9,23 @@ struct node{
     node(int val){ data=val; left=NULL; right=NULL; }
 };
 
-int util(node *root){
+int util(node *root){ // modification of height function
 
     if(root==NULL) return 0;
 
     int lh = util(root->left);
     int rh = util(root->right);
 
-    if(lh==-1 || rh==-1) return -1;
-    if(abs(rh-lh)>1) return -1;
+    // lh or rh will be -1 only when the second if statement is executed
+    // else height will be returned
+    if(lh==-1 || rh==-1) return -1; // if any subtreee is not balanced: return -1
+    if(abs(rh-lh)>1) return -1; // if tree is not balanced: -1
 
-    return max(rh,lh) + 1;
+    return max(rh,lh) + 1; // else: return: height
     
 }
 
+// t: O(n)
 bool isBalancedOptimized(node *root){
 
     return util(root)==-1 ? 0 : 1;
